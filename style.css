@@ -1,0 +1,40 @@
+.father {
+    display: grid;
+    grid-template-columns: 50px repeat(2, 100px) 50px;
+    grid-template-rows: 100px repeat(2,200px) 100px;
+    grid-template-areas: 
+    "header header header header"
+    "content content content nav"
+    "content content content nav"
+    "footer footer footer footer"
+    ;
+    gap: 10px 10px;
+}
+
+.father>div {
+    color: #fff;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    background: rgb(24, 215, 72);
+    grid-area: header;
+}
+
+.content {
+    background: rgb(69, 24, 215);
+    grid-area: content;
+}
+
+.nav {
+    background: rgb(215, 24, 120);
+    grid-area: nav;
+}
+
+.footer {
+    background: rgb(215, 97, 24);
+    grid-area: footer;
+}
